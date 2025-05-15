@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
+import { FaUserCircle } from "react-icons/fa";
 
 export default function LoginPage() {
   const [username, setUsername] = useState("");
@@ -26,23 +27,26 @@ export default function LoginPage() {
   }, []);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-blue-50">
-      <div className="bg-white p-6 rounded shadow-md w-96">
-        <h1 className="text-2xl font-bold mb-4 text-center">
-          Sign In / Sign Up
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-400 to-blue-500">
+      <div className="bg-white p-8 rounded-xl shadow-lg w-96">
+        <div className="flex justify-center mb-6">
+          <FaUserCircle className="text-indigo-500 text-5xl" />
+        </div>
+        <h1 className="text-2xl font-bold mb-6 text-center text-gray-800">
+          Welcome to Insyd
         </h1>
         <input
           type="text"
-          placeholder="Enter username"
-          className="w-full p-2 border mb-4"
+          placeholder="Enter your username"
+          className="w-full p-3 border rounded-md mb-6 text-gray-700 focus:ring-indigo-500 focus:border-indigo-500"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
         <button
           onClick={handleLogin}
-          className="w-full bg-blue-600 text-white py-2 rounded"
+          className="cursor-pointer w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-md font-semibold transition duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-1"
         >
-          Continue
+          Continue to Dashboard
         </button>
       </div>
     </div>

@@ -148,7 +148,7 @@ export default function DashboardPage() {
             />
             <button
               onClick={createPost}
-              className="bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-md shadow-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-1 transition-colors duration-150 text-sm"
+              className="cursor-pointer bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2 rounded-md shadow-sm font-semibold focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-1 transition-colors duration-150 text-sm"
             >
               Post
             </button>
@@ -201,7 +201,7 @@ export default function DashboardPage() {
                       ) : (
                         <button
                           onClick={() => follow(u._id)}
-                          className="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded-md text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-1 transition-colors duration-150"
+                          className="cursor-pointer bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded-md text-sm font-semibold focus:outline-none focus:ring-2 focus:ring-green-400 focus:ring-offset-1 transition-colors duration-150"
                         >
                           Follow
                         </button>

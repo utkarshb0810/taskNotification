@@ -33,7 +33,7 @@ export default function Home() {
           <span className="text-gray-600 font-normal">Notifications</span>
         </h1>
         <p className="mt-3 text-lg text-gray-600 max-w-2xl mx-auto">
-          A simplified real-time notification system built for the architecture
+          A simplified notification system built for the architecture
           community to post updates, follow members, and stay informed.
         </p>
       </div>
