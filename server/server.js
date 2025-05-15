@@ -7,12 +7,17 @@ const postRoute = require("./routes/postRoute.js");
 const notificationRoute = require("./routes/notificationRoute.js");
 dotenv.config();
 const app = express();
+
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: [
+      "http://localhost:3000",
+      "https://task-notification-two.vercel.app",
+    ],
     credentials: true,
   })
 );
+
 app.use(express.json());
 
 connectDB(); // connect to MongoDB
