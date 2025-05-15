@@ -1,5 +1,6 @@
 "use client";
 
+import toast from "react-hot-toast";
 import { useEffect, useState } from "react";
 import UserForm from "../../components/UserForm";
 import UserList from "../../components/UserList";
@@ -29,7 +30,8 @@ export default function UsersPage() {
         body: JSON.stringify({ followerId }),
       }
     );
-    alert("Followed successfully!");
+    
+    toast.success("Followed successfully!");
   };
 
   useEffect(() => {

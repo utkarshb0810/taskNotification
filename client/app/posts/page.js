@@ -1,5 +1,5 @@
 "use client";
-
+import toast from "react-hot-toast";
 import { useState } from "react";
 
 export default function PostsPage() {
@@ -14,12 +14,10 @@ export default function PostsPage() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ userId, content }),
     });
-
-    alert("Post created and followers notified!");
+    toast.success("Post created and followers notified!");
     setUserId("");
     setContent("");
   };
-
   return (
     <div className="max-w-xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Create Post</h1>
